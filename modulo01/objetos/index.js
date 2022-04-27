@@ -30,6 +30,119 @@
 
 // Exercícios de escrita de código: 
 
+// Questão 1:
+
+// a)
+
+// let pessoa = {
+
+//     nome: "James McGill",
+//     apelidos: ["Jimmy", "Saul", "Goodman"]
+
+// }
+
+// function pessoaObjeto(objeto) {
+
+//     return `Eu sou ${objeto.nome}, mas pode me chamar de: ${objeto.apelidos[0]}, 
+//     ${objeto.apelidos[1]} ou ${objeto.apelidos[2]}`
+
+// }
+
+// console.log(pessoaObjeto(pessoa))
+
+// // b)
+
+// let novaPessoa = {
+
+//     ...pessoa,
+//     apelidos: ["Advogado", "Lalo Friend", "Nacho Friend"]
+
+// }
+
+// function pessoaObjeto(objeto) {
+
+//     return `Eu sou ${objeto.nome}, mas pode me chamar de: ${objeto.apelidos[0]}, 
+//     ${objeto.apelidos[1]} ou ${objeto.apelidos[2]}`
+
+// }
+
+// console.log(pessoaObjeto(novaPessoa))
+
+// Questão 2:
+
+// a)
+
+// let pessoa01 = {
+
+//     nome: "Walter White",
+//     idade:52 ,
+//     profissao: "Professor de Química"
+
+// }
+
+// let pessoa02 = {
+
+//     nome: "Gustavo Fring",
+//     idade: 51 ,
+//     profissao: "Empresário"
+
+// }
+
+// b)
+
+// function pessoas(objeto01, objeto02) {
+
+//     let array1 = [objeto01.nome, objeto01.nome.length, objeto01.idade, objeto01.profissao, 
+//         objeto01.profissao.length]
+
+//     let array2 = [objeto02.nome, objeto02.nome.length, objeto02.idade, objeto02.profissao, 
+//         objeto02.profissao.length]
+
+//     return [array1, array2]
+// }
+
+// console.log(pessoas(pessoa01, pessoa02))
+
+// Questão 3:
+
+// a)
+
+let carrinho = []
+
+// b)
+
+let fruta01 = {
+    
+    nome: "Melancia",
+    disponibilidade: true
+}
+
+let fruta02 = {
+  
+    nome: "Melão",
+    disponibilidade: true
+}
+
+let fruta03 = {
+   
+    nome: "Banana",
+    disponibilidade: true
+}
+
+// c)
+
+function frutas(objeto01, objeto02, objeto03) {
+
+    return [objeto01, objeto02, objeto03]
+
+}
+
+carrinho.push(frutas(fruta01, fruta02, fruta03))
+
+// d)
+
+console.log(carrinho)
+
 // ...........................................................................................................
 
 // Desafios:
