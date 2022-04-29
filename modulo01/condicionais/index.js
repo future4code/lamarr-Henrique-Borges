@@ -29,7 +29,7 @@
 // c) A variável mensagem não pôde ser acessada pelo console.log no escopo global, 
 // uma vez que ela pertence ao if (escopo local).
 
-// ...............................................................................................................................
+// .........................................................................................................
 
 // Exercícios de escrita de código:
 
@@ -84,3 +84,32 @@
 // }
 
 // Questão 4:
+
+// let generoFilme = prompt("Qual gênero de filme você vai assistir?")
+// let valorIngresso = Number(prompt("Qual valor do ingresso?"))
+
+// if(generoFilme === "fantasia" && valorIngresso < 15 ){
+//     console.log("Bom filme!")
+
+// }else {
+//     console.log("Escolha outro filme :(")
+// }
+
+// .........................................................................................................
+
+// Desafios:
+
+// Questão 1:
+
+// let generoFilme = prompt("Qual gênero de filme você vai assistir?")
+// let valorIngresso = Number(prompt("Qual valor do ingresso?"))
+// let lanche = prompt("Qual lanche você vai comprar?")
+
+// if(generoFilme === "fantasia" && valorIngresso < 15 ){
+//     console.log(`Bom filme, aproveite seu ${lanche}.`)
+
+// }else {
+//     console.log("Escolha outro filme :(")
+// }
+
+// Questão 2:
