@@ -39,3 +39,67 @@
 
 // Questão 2:
 
+// let arrayOriginal = [80, 30, 130, 40, 60, 21, 70, 120, 90, 103, 110, 55]
+
+// a)
+
+// function arrayValores(parametro) {
+
+//     for (let i = 0; i < parametro.length; i++) {
+//         valor = parametro[i]
+//         console.log(valor)
+//     }
+    
+// }
+// arrayValores(arrayOriginal)
+
+// b) 
+
+// function arrayValores(parametro) {
+
+//     for (let i = 0; i < parametro.length; i++) {
+//         valor = parametro[i] / 10
+//         console.log(valor)
+//     }
+    
+// }
+// arrayValores(arrayOriginal)
+
+// c)
+
+// let novoArray = []
+
+// function arrayValores(parametro) {
+
+//     for (let i = 0; i < parametro.length; i++) {
+        
+//         valor = parametro[i]
+//         if (valor % 2 === 0){
+//             novoArray.push(valor)
+//         }
+        
+//     }
+
+//     console.log(novoArray)
+    
+// }
+// arrayValores(arrayOriginal)
+
+// d)
+
+// let novoArray = []
+
+// function arrayValores(parametro) {
+
+//     for (let i = 0; i < parametro.length; i++) {
+        
+//         valor = parametro[i]
+//         mensagem = `O elemento do índex ${i} é: `     
+//         arrayString = mensagem + valor
+//         novoArray.push(arrayString)
+//     }
+//     console.log(novoArray)
+// }
+// arrayValores(arrayOriginal)
+
+// e)
