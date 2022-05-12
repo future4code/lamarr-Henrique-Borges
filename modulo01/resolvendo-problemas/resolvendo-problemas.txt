@@ -1,0 +1,37 @@
+Exercícios de fixação do conhecimento:
+
+7 Passos para resolver problemas na programação:
+
+*Passo 1 - Ter Atenção no Enunciado
+
+    Ler o enunciado com atenção e identificar o que a questão está pedindo. 
+
+*Passo 2 - Retirar Informações Relevantes
+
+    Separar os prinicipais pontos que vão nos ajudar a resolver o problema em questão.
+
+*Passo 3 - Pensar nas Entradas e Saídas
+
+    Pensar em uma forma de como resolver o problema no código.
+
+*Passo 4 - Fazer Um Esquema Visual 
+
+    Montar diagramas ou criar exemplos visuais que nos ajudem a entender nossa lógica.
+
+*Passo  - Criar Um Código Feio
+
+    Momento de escrever o código em si e tentar resolver o problema, independente se o código está "elegante" ou não.
+
+*Passo 6 -  Testar: Força-Bruta
+
+    Momento de testar o código e ver o que funciona ou não.
+
+*Passo 7 - Refatorar
+
+    "Reformar" o código. Acrescentar melhorias que sejam necessárias ou mudar o que não ficou tão "elegante" num primeiro momento.
+
+    
+.
+    
+
+    
