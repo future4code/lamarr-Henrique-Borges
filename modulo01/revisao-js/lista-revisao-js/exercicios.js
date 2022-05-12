@@ -17,6 +17,7 @@ function retornaArrayInvertido(array) {
 
 // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
+   
     let numeros = array.sort(function ordenados(a, b) {return a - b;})
     return numeros 
   
@@ -28,39 +29,86 @@ function retornaNumerosPares(array) {
     let pares = array.filter((item) => {
         return item % 2 === 0
     })
-
+    
     return pares
+    
 }
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
-    
+
+    let pares = array.filter((item) => {
+        return item % 2 === 0
+    })
+
+    let paresElevados = pares.map((elevado) => {
+        return Math.pow(elevado, 2)
+    })
+
+    return paresElevados
  
 }
 
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
-  
+   
+    let numerosOrdenados = array.sort(function ordenados(a, b) {return a - b;})
+    return numerosOrdenados[numerosOrdenados.length-1]
 }
 
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
 
+    let maior = Math.max(num1, num2)
+    let menor = Math.min(num1, num2) 
+   
+    let objeto01 = {
+
+        maiorNumero: maior,
+        maiorDivisivelPorMenor: (maior % menor) === 0,
+        diferenca: maior - menor
+
+    }
+
+    return objeto01
+
 }
 
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
-   
-}
+
+    let numerosPares = []
+
+    for(let i = 0; numerosPares.length < n; i++){
+        if (i % 2 === 0) {
+            numerosPares.push(i)
+        }
+    }
+    return numerosPares
+}  
 
 // EXERCÍCIO 09
 function classificaTriangulo(ladoA, ladoB, ladoC) {
+
+    if (ladoA === ladoB && ladoB === ladoC) {
+        return "Equilátero"
+    }
+
+    if (ladoA === ladoB || ladoA === ladoC || ladoB === ladoC) {
+        return "Isósceles"
+    }
+
+    if (ladoA !== ladoB && ladoB !== ladoC){
+        return "Escaleno"
+    }
 
 }
 
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
-  
+    let numerosOrdenados = array.sort(function ordenados(a, b) {return a - b;})
+    return [numerosOrdenados[numerosOrdenados.length-2], numerosOrdenados[1]]
+
 }
 
 // EXERCÍCIO 11
