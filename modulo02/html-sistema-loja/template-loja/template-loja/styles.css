@@ -1,35 +1,66 @@
 .estilo-de-cabeçalho{
     background-color: rgb(48, 45, 45);
-    border: 1px solid white;
+    border: 1px solid rgb(48, 44, 44);
     color: white;
-    margin: -9px -9px 0px -9px;
+    margin: -7px -7px 0px -7px;
     padding-left: 7px;
 }
 
-.margem01{
+#margem-descricao{
     margin-top: -20px;
 }
 
-.margem-rodape{
+#margem-superior-rodape{
     margin-top: 500px;
 }
 
 .estilo-rodape{
     background-color: rgb(48, 45, 45);
-    border: 1px solid white;
+    border: 1px solid rgb(48, 44, 44);
     color: white;
-    margin: 0px -10px 10px -9px;
+    margin: 0px -7px 10px -7px;
     padding: 10px 0px 10px 500px;
 }
 
-.central {
+.centralizar {
     margin-left: 460px;
     
 }
 
 .botoes {
-    color: red;
+    color: black;
     display: block;
-    margin: 0px -9px 10px -9px;
+    margin: 5px 0px 0px -7px;
     padding-left: 7px;
+}
+
+#margem-lista{
+    margin-left: -20px;
+}
+
+.botoes-dois {
+    color: black;
+    display: block;
+    margin-bottom: -5px;
+}
+
+.estilo-tabela{
+    background-color: white;
+    color: black;
+    margin: 5px 0px 0px 0px;
+}
+
+.espacamento{
+    padding-right: 150px;
+    padding-bottom: 10px;
+    background-color: darkgray;
+}
+
+#color01{
+    background-color: darkgray;
+    padding-bottom: 10px;
+}
+
+.color02{
+    background-color: snow;
 }

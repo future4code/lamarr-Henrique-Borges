@@ -5,37 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Adicionar Produto</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <header>
-        <p>Loja do Gigante</p>
+    <header class="estilo-de-cabeçalho">
+        <h2>Loja do Gigante</h2>
     </header>
     
     <nav>
-        <a href="index.html">Página Inicial</a>
-        <a href="ctrl-estoque.html">Controle de Estoque</a>
-        <a href="add-produto.html">Adicionar Produto</a>
-        <a href="funcionarios.html">Funcionários</a>
+        <a class="botoes" href="index.html">Página Inicial</a>
+        <a class="botoes" href="ctrl-estoque.html">Controle de Estoque</a>
+        <a class="botoes" href="add-produto.html">Adicionar Produto</a>
+        <a class="botoes" href="funcionarios.html">Funcionários</a>
     </nav>
 
     
-    <h2>Adicionar Produto</h2>
+    <h3>Adicionar Produto:</h3>
     <form action="">
 
             <label for="link-foto">Link para foto: </label>
-            <input type="url" id="link-foto" name="link-foto">
+            <input class="botoes-dois" type="url" id="link-foto" name="link-foto">
             <br>
      
             <label for="descricao">Descrição do produto: </label>
-            <input type="text" id="descricao" name="descrição">
+            <input class="botoes-dois" type="text" id="descricao" name="descrição">
             <br>
 
             <label for="preco">Preço (em R$): </label>
-            <input type="number" id="preco" name="preço">
+            <input class="botoes-dois" type="number" id="preco" name="preço">
             <br>
 
             <label for="quantidade"> Quantidade disponível: </label>
-            <input type="number" id="quantidade" name="quantidade">
+            <input class="botoes-dois" type="number" id="quantidade" name="quantidade">
             <br>
 
             <button type="submit">Adicionar</button>
@@ -44,4 +45,3 @@
 
 </body>
 </html>
-
