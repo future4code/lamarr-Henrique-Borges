@@ -1,0 +1,35 @@
+.estilo-de-cabeçalho{
+    background-color: rgb(48, 45, 45);
+    border: 1px solid white;
+    color: white;
+    margin: -9px -9px 0px -9px;
+    padding-left: 7px;
+}
+
+.margem01{
+    margin-top: -20px;
+}
+
+.margem-rodape{
+    margin-top: 500px;
+}
+
+.estilo-rodape{
+    background-color: rgb(48, 45, 45);
+    border: 1px solid white;
+    color: white;
+    margin: 0px -10px 10px -9px;
+    padding: 10px 0px 10px 500px;
+}
+
+.central {
+    margin-left: 460px;
+    
+}
+
+.botoes {
+    color: red;
+    display: block;
+    margin: 0px -9px 10px -9px;
+    padding-left: 7px;
+}
