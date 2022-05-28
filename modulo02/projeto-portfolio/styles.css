@@ -1,30 +1,31 @@
+/* Estilização de Links */
 nav a {
     color: cornflowerblue;
 }
-
 nav a:link {
     text-decoration: none;
     border: solid;
 }
-   
 nav a:hover {
     color: orange;
 }
 
+/* Colocar texto à direita */
 .a-direita{
     margin-left: 71%;
 }
 
+/* Estilização de Cabeçalho */
 .cabecalho{
     Font-size:30px;
 }
 
+/* Centralizar texto */
 .centralizar{
     text-align: center;
     color: cornflowerblue;
     margin-top: 5%;   
 }
-
 header p{
     Font-size:20px;
     margin-top: -1%;
@@ -32,68 +33,88 @@ header p{
     margin-bottom: 5%;
 }
 
+/* estilização de tabela */
 .tabela{
     display: inline;
     margin-left: 24%;
     color: cornflowerblue;
     Font-size:20px;
 }
-
 table tr td{
     color: orange;
 }
-
 table tr td a:link {
     text-decoration: none;
-}
-   
+}  
 table tr td a{
     color: orange;
 }
-
 table tr td a:hover {
     text-decoration: underline;
 }
-
 table tr th a{
     color: cornflowerblue;
 }
-
 table tr th a:link {
     text-decoration: none;
     color: cornflowerblue;
 }
+.tabela-projeto{
+    Font-size:20px;
+}
 
+/* estilização de rodapé */
 .rodape{
     text-align: center;
     margin-top: 10%;
 }
-
 P{
     Font-size:20px;
 }
 
-.inlinizar{
-    display: inline;
+/* Estilização botão Projeto */
+header h1 a:link {
+    text-decoration: none;
+}
+header h1 a:hover {
+    text-decoration: underline;
+}
+header h1 a {
+    color: cornflowerblue;
 }
 
-.tabela02{
-    display: inline;
-    margin-left: 10%;
+/* Estilo titulo-projeto */
+#titulo-projeto{
     color: cornflowerblue;
     Font-size:20px;
 }
 
-#descricao{
+/* Formulário contato */
+.botoes-contato{
+    display: block;
+    width: 300px;
+    margin-left: 39%;
+    margin-bottom:1%;
+    font-size: 18px;
+}
+textarea{
+    display: block;
+    width: 300px;
+    margin-left: 39%;
+    margin-bottom:1%;
+    font-size: 18px;
+}
+form{
     text-align: center;
     color: orange;
+    Font-size:20px;
 }
-
-#distancia{
-    margin-bottom: 5%;
-
+button{
+    color: cornflowerblue;
+    background-color:white;
+    border-color: cornflowerblue;
 }
-
-#abaixo{
-    margin-top: 50%;
+button:hover {
+    color: orange;
+    border-color: orange;
 }
