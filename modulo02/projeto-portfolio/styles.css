@@ -1,0 +1,99 @@
+nav a {
+    color: cornflowerblue;
+}
+
+nav a:link {
+    text-decoration: none;
+    border: solid;
+}
+   
+nav a:hover {
+    color: orange;
+}
+
+.a-direita{
+    margin-left: 71%;
+}
+
+.cabecalho{
+    Font-size:30px;
+}
+
+.centralizar{
+    text-align: center;
+    color: cornflowerblue;
+    margin-top: 5%;   
+}
+
+header p{
+    Font-size:20px;
+    margin-top: -1%;
+    color: orange;
+    margin-bottom: 5%;
+}
+
+.tabela{
+    display: inline;
+    margin-left: 24%;
+    color: cornflowerblue;
+    Font-size:20px;
+}
+
+table tr td{
+    color: orange;
+}
+
+table tr td a:link {
+    text-decoration: none;
+}
+   
+table tr td a{
+    color: orange;
+}
+
+table tr td a:hover {
+    text-decoration: underline;
+}
+
+table tr th a{
+    color: cornflowerblue;
+}
+
+table tr th a:link {
+    text-decoration: none;
+    color: cornflowerblue;
+}
+
+.rodape{
+    text-align: center;
+    margin-top: 10%;
+}
+
+P{
+    Font-size:20px;
+}
+
+.inlinizar{
+    display: inline;
+}
+
+.tabela02{
+    display: inline;
+    margin-left: 10%;
+    color: cornflowerblue;
+    Font-size:20px;
+}
+
+#descricao{
+    text-align: center;
+    color: orange;
+}
+
+#distancia{
+    margin-bottom: 5%;
+
+}
+
+#abaixo{
+    margin-top: 50%;
+}
