@@ -18,32 +18,38 @@ header img{
     margin-right: 1%;
 }
 
-/* Estilização table */
+/* Estização main */
+.container{
+    display: flex;
+}
+#div-mae{
+    display: flex;
+    flex-wrap: wrap;
+    /* margin: 1%; */
+}
+.div-filho{
+    text-align: center;
+    background-color: rgb(233, 233, 218);
+    margin: 1%;
+}
 table{
     background-color: #f2d0e0;
-    padding-bottom: 40%;
-    padding-right: 10%;
-}
-.a-direita{
-    padding-left: 95%;
-}
-.a-direita02{
-    padding-left: 10%;
+    display: flex;
+    padding-right: 6%;
 }
 td{
     padding: 5%;
 }
-
-/* Estização main */
-.main01{
-    display: flex;
-    flex-wrap: wrap;
+.a-direita{
+    padding-left: 10%;
 }
-
+.a-direita02{
+    padding-left: 55%;
+}
 /* Estilização footer */
 footer{
     background-color: mediumvioletred;
     padding: 1%;
     display: flex;
-    justify-content: center
+    justify-content: center;
 }
