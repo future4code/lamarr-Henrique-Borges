@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do header */
+header{
+    display:flex;
+    justify-content: space-between;
+    background-color: orange;
+    padding: 2% 3% 2% 1%;
+}
+.botao-pesquisa{
+    padding-left: 1%;
+}
+
+/* Estilo da main*/
+.main-container{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+}
+div{
+    border: solid;
+    border-width: 1px;
+    border-color: green;
+    margin: 5%;
+}
+img, p, a {
+    padding-bottom: 7%;
+    color: black;
+}
+.main-container-video{
+    display: grid;
+    grid-template-rows: 1fr 15fr;
+    grid-template-columns:  1fr;
+    padding: 2% 2%;
+}
+
+/* estilo do footer */
+footer{
+    background-color: darkslategrey;
+    padding: 1%;
+    text-align: center;
+    color: white;
+}
+
+
