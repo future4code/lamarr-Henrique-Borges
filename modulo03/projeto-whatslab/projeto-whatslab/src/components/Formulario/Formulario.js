@@ -3,7 +3,19 @@ import styled from "styled-components";
 
 const Form = styled.form`
     display: flex;
-    width: 124%;
+    width: 132%;
+
+    label {
+        //screen reader only
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        border: 0;
+    }
 `
 const Imput = styled.input`
     width: 50%;
@@ -27,7 +39,6 @@ const P = styled.p`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-color: aqua;
 `
 
 export function Formulario() {
@@ -36,7 +47,7 @@ export function Formulario() {
     const [inputUsuario, setInputUsuario] = useState("")
     const [inputMensagem, setInputMensagem] = useState("")
     const [Mensagem, setMensagem] = useState([])
-
+    
     // eventos
     const handleInputUsuario = (e) => {
         setInputUsuario(e.target.value)
@@ -45,48 +56,48 @@ export function Formulario() {
         setInputMensagem(e.target.value)
     }
 
-    const addPessoa = (e) => {
-        e.preventDefault();
-
-        const novaMensagem = [inputUsuario+': ' +inputMensagem]
+    const addMensagem = (e) => {
+        e.preventDefault()
+        const novaMensagem = inputUsuario +': ' +inputMensagem
         const novaMensagemDigitada = [...Mensagem, novaMensagem]
         setMensagem(novaMensagemDigitada)
     }
 
-    const msg = Mensagem.map((a) => {
-    
-        return (
-            <p>{a.Mensagem}</p>
-        )
-      })
+    const msg = Mensagem.map((m, index) => {
+        m = Mensagem[index]
 
-      console.log(msg)
+        return (
+          <div key={index}>
+            <p>{m}</p> 
+          </div>
+        )
+    })
 
     return(
         <div>
             <Section>
-            <P>
-                {msg}
-            </P>
-            <Form>
-                <label></label>
-                <input  
-                    placeholder="Remetente:"
-                    value={inputUsuario}
-                    onChange={handleInputUsuario}
-                />
+                <P>
+                    {msg}
+                </P>
+                <Form>
+                    <label>Remetente</label>
+                    <input  
+                        placeholder="Remetente:"
+                        value={inputUsuario}
+                        onChange={handleInputUsuario}
+                    />
 
-                <label></label>
-                <Imput
-                    placeholder="Mensagem:"
-                    value={inputMensagem}
-                    onChange={handleInputMensagem}
-                />
+                    <label>Mensagem</label>
+                    <Imput
+                        placeholder="Mensagem:"
+                        value={inputMensagem}
+                        onChange={handleInputMensagem}
+                    />
 
-                <button onClick={addPessoa}>
-                    Clique aqui
-                </button>                
-            </Form>
+                    <button onClick={addMensagem}>
+                        Enviar
+                    </button>                
+                </Form>
             </Section>
         </div>
     )
