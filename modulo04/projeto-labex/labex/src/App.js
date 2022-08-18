@@ -1,4 +1,4 @@
-import { Rotas } from "./Rotas";
+import { Rotas } from "./Rotas/Rotas";
 
 function App() {
   return (
