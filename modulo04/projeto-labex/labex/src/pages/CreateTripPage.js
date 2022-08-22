@@ -3,9 +3,9 @@
 import React from "react";
 
 export function CreateTripPage() {
-  return (
-    <div>
-      <p>Criar nova página</p>
-    </div>
-  );
+	return (
+    	<div>
+      		<p>Criar nova página</p>
+    	</div>
+  	)
 }

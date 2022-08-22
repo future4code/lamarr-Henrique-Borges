@@ -3,9 +3,9 @@
 import React from "react";
 
 export function LoginPage() {
-  return (
-    <div>
-      <p>Login</p>
-    </div>
-  );
+	return (
+    	<div>
+      		<p>Login</p>
+    	</div>
+  	)
 }
