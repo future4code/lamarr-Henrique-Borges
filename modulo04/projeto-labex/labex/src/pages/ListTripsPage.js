@@ -1,5 +1,3 @@
-// Para vermos todas as viagens
-
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import * as MyRoute from "../Coodinator/Coodinator";
@@ -8,8 +6,11 @@ import { useRequestData } from "../Hooks/UseRequestData";
 export function ListTripsPage() {
 
 	const navigate = useNavigate()
+	const voltar = () => {
+		navigate(-1)
+	}
 
-	const trip = useRequestData(
+	const [trip, isLoading, erro] = useRequestData(
 		"https://us-central1-labenu-apis.cloudfunctions.net/labeX/henrique-borges-lamarr/trips"
 	)
 	
@@ -20,7 +21,7 @@ export function ListTripsPage() {
       			<p>Descrição:{item.description}</p> 
       			<p>Planeta: {item.planet} </p>
       			<p>Duração:{item.durationInDays} </p>
-      			<p>Data: {item.date} </p> 
+      			<p>Data: {item.date} </p>
       			<hr/>   
     		</div>
 		)
@@ -28,11 +29,14 @@ export function ListTripsPage() {
 
   	return (
     	<div>
-      		<p>Lista de viagens</p>
-      		<button onClick={()=>{MyRoute.goToApplicationForm(navigate)}}>Inscrever-se</button>
-      		<div>
-      			{componenteTrip}
-      		</div>
+			<button onClick={voltar}>Voltar</button>
+			<button onClick={()=>{MyRoute.goToApplicationForm(navigate)}}>Inscrever-se</button>
+      		<h1> Lista de viagens </h1>
+			{isLoading && <p> Carregando...</p>} 
+			{!isLoading && erro && <p> Ocorreu um erro</p>}
+			{!isLoading && trip && trip.length > 0 && componenteTrip}
+			{!isLoading && trip && trip.length === 0 && (<p>Não há nenhuma Viagem</p>)}
     	</div>
   	)
 }
+

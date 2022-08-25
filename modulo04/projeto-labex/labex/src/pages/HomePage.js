@@ -1,5 +1,3 @@
-// Para o usuário escolher entre Área Administrativa e Lista de Viagens
-
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import * as MyRoute from "../Coodinator/Coodinator";
@@ -10,7 +8,7 @@ export function HomePage() {
 
   	return (
     	<div>
-      		<p>Página Inicial</p>
+      		<h1>LabeX</h1>
       		<button onClick={()=>{MyRoute.goToListTrips(navigate)}}>Ver Viagens</button>
       		<button onClick={()=>{MyRoute.goToAdminHome(navigate)}}>Área de Admin</button>
     	</div>
