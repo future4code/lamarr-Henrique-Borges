@@ -10,10 +10,10 @@ export function AdminHomePage() {
     
 	return (
 		<div>
-      		<p>Painel Administrativo</p>
+      		<h1>Painel Administrativo</h1>
       		<button onClick={()=>{MyRoute.goToCreateTrip(navigate)}}>Criar Viagens</button>
       		<button onClick={()=>{MyRoute.goToTripDetails(navigate)}}>Detalhes das Viagens</button>
-      		<button onClick={()=>{MyRoute.goToLogin(navigate)}}>Login</button>
+      		<button onClick={()=>{MyRoute.goToLogin(navigate)}}>Logout</button>
     	</div>
   	)
 }

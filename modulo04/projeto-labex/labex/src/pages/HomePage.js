@@ -10,7 +10,7 @@ export function HomePage() {
     	<div>
       		<h1>LabeX</h1>
       		<button onClick={()=>{MyRoute.goToListTrips(navigate)}}>Ver Viagens</button>
-      		<button onClick={()=>{MyRoute.goToAdminHome(navigate)}}>Área de Admin</button>
+      		<button onClick={()=>{MyRoute.goToLogin(navigate)}}>Área de Admin</button>
     	</div>
   	)
 }

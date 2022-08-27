@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "../Hooks/UseForm";
 
 export function ApplicationFormPage() {
-
 	const navigate = useNavigate()
     const voltar = () => {
 		navigate(-1)
@@ -20,18 +19,20 @@ export function ApplicationFormPage() {
 	})
 
 	const url = `https://us-central1-labenu-apis.cloudfunctions.net/labeX/henrique-borges-lamarr/trips/${form.trip}/apply`
-
+    
 	const fazerInscricao = (event) => {
         event.preventDefault()
 		
         axios.post(url, form).then((response) => {
-            alert("Inscrição feita com Sucesso, Boa sorte!")
+            alert("Inscrição feita com Sucesso, Boa sorte!", response)
+
         }).catch((error) =>{
-            alert("Preencha todos os campos corretamente.")
+            alert("Preencha todos os campos corretamente.", error)
+            
         })
         clear();
     }
-
+   
 	return (
     	<div>
       		<h1>Formulário de inscrição</h1>
@@ -43,7 +44,7 @@ export function ApplicationFormPage() {
                     value={form.trip}
                     onChange={onChange}
                     required >
-                    <option>Escolha uma Viagem</option>
+                    <option value={null}>Escolha uma Viagem</option>
                     <option value="IXFIOGHnKRMV7mSsVIky">Picnic de Inverno em Plutão - Plutão</option>
                     <option value="NDuDGfJ0n3Kkll6L24TI">Multi luau em Jupiter - Jupiter</option>
                     <option value="YpxVueUiazMJxRHMgIp9">Surfando em Netuno - Netuno</option>
@@ -98,12 +99,13 @@ export function ApplicationFormPage() {
                 />
                 <label htmlFor="paises"/>
                 <select
+            
                     name="country"
                     id="paises"
                     value={form.country}
                     onChange={onChange}
                     required >
-                    <option>Escolha um país:</option>
+                    <option value={null}>Escolha um país:</option>
                     <option value="Brasil">Brasil</option>
                     <option value="Afeganistão">Afeganistão</option>
                     <option value="África do Sul">África do Sul</option>
