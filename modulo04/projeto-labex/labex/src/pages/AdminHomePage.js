@@ -5,6 +5,7 @@ import { useRequestData } from "../Hooks/UseRequestData";
 import { useProtectedPage } from "../Hooks/useProtectedPage";
 import axios from "axios";
 import { useEffect} from "react"
+import {Titulo,  Centralizar, BotaoClicar,ComponentListAdmin, BotaoAdmin, BotaoEcluir } from './style'
 
 export function AdminHomePage() {
 	useProtectedPage()
@@ -34,16 +35,13 @@ export function AdminHomePage() {
 
     	return (
 			
-			<div id="myDIV" key={item.id}>
-      			<button onClick={idSelecionado}>  
-					<p>{item.name}</p>   
-				</button> 
-				<button onClick={deletarViagem}> Excluir Viagem</button>
-      			<hr/>  
-				 
-    		</div>
+			<ComponentListAdmin id="myDIV" key={item.id}>
+      			<BotaoAdmin onClick={idSelecionado}>  
+					{item.name}   
+				</BotaoAdmin> 
+				<BotaoEcluir onClick={deletarViagem}> Excluir</BotaoEcluir>
+    		</ComponentListAdmin>
 		)
-		
   	})
 
 	useEffect(() => {
@@ -62,10 +60,13 @@ export function AdminHomePage() {
 
 	return (
 		<div>
-      		<h1>Painel Administrativo</h1>
-			<button onClick={voltar}>Voltar</button>
-      		<button onClick={()=>{MyRoute.goToCreateTrip(navigate)}}>Criar Viagens</button>
-      		<button onClick={()=>{MyRoute.goToLogin(navigate)}}>Logout</button>
+      		<Titulo>Painel Administrativo</Titulo>
+			<Centralizar>
+			<BotaoClicar onClick={voltar}>Voltar</BotaoClicar>
+      		<BotaoClicar onClick={()=>{MyRoute.goToCreateTrip(navigate)}}>Criar Viagens</BotaoClicar>
+      		<BotaoClicar onClick={()=>{MyRoute.goToLogin(navigate)}}>Logout</BotaoClicar>
+
+			</Centralizar>
 			{isLoading && <p> Carregando...</p>} 
 			{!isLoading && erro &&  <p> Ocorreu um erro</p>}
 			{!isLoading && trip && !isLoading && trip.length > 0  &&  !isLoading && nameTrip}

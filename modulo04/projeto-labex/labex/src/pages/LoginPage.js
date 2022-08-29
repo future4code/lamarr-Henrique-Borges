@@ -3,6 +3,7 @@ import React from "react"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
 import { useForm } from "../Hooks/UseForm"
+import {Titulo,  Centralizar, BotaoClicar, Imput} from './style'
 
 export function LoginPage() {
 
@@ -29,10 +30,12 @@ export function LoginPage() {
 
 	return (
     	<div>
-      		<h1>Login</h1>
+      		<Titulo>Login</Titulo>
+            <Centralizar>
+
 			<form onSubmit={fazerLogin}>
 				<label htmlFor="email"/>
-                <input
+                <Imput
                     name="email"
                     id="email"
                     placeholder="E-mail"
@@ -42,7 +45,7 @@ export function LoginPage() {
                     required 
                 />
                 <label htmlFor="senha"/>
-                <input
+                <Imput
                     name="password"
                     id="senha"
                     placeholder="Senha"
@@ -53,9 +56,12 @@ export function LoginPage() {
                     title="mínimo de 3 caracteres"
                     required
                 />
-				<button onClick={voltar}>Voltar</button>
-                <button type="submit" >Enviar </button> 
+                <Centralizar>
+				    <BotaoClicar onClick={voltar}>Voltar</BotaoClicar>
+                    <BotaoClicar type="submit" >Enviar </BotaoClicar> 
+                </Centralizar>
 			</form>
+            </Centralizar>
     	</div>
   	)
 }

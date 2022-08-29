@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import { useProtectedPage } from "../Hooks/useProtectedPage";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import {Titulo,  Centralizar,ComponentListTrip, BotaoClicar} from './style'
 
 export function TripDetailsPage() {
 	
@@ -34,51 +35,59 @@ export function TripDetailsPage() {
 	const {date, description, durationInDays, id, name, planet} = details
 
 	const [candidates, seCandidates] = useState([])
+	console.log(candidates)
 	const componenteCandidate = candidates.map((item) => {
-		
     	return (
-			<div key={item.id}>
+			<ComponentListTrip key={item.id}>
       			<p>Candidato: {item.name}, {item.age} Anos</p>
 				<p>Profissão: {item.profession}</p>
 				<p>Texto de candidatura: {item.applicationText}</p>
 				<p>País: {item.country}</p>
       			<hr/>   
-    		</div>
+    		</ComponentListTrip>
 		)
   	})
 
 	const [approved, setApproved] = useState([])
 	const componenteApproved = approved.map((item) => {
     	return (
-			<div key={item.id}>
+			<ComponentListTrip key={item.id}>
       			<p>Candidato: {item.name}, {item.age} Anos</p>
 				<p>Profissão: {item.profession}</p>
 				<p>Texto de candidatura: {item.applicationText}</p>
 				<p>País: {item.country}</p>
       			<hr/>   
-    		</div>
+    		</ComponentListTrip>
 		)
   	})
 
 	return (
     	<div>
 			<div>
-    			<h1>{name}</h1>
-				<p>{name}</p>
-				<p>{description}</p>
-				<p>{planet}</p>
-				<p>{durationInDays}</p>
-				<p>{date}</p>
+    			<Titulo>{name}</Titulo>
+
+				<Centralizar>
+					<div>
+						<p>Nome: {name}</p>
+						<p>Descrição: {description}</p>
+						<p>Planeta: {planet}</p>
+						<p>Duração: {durationInDays}</p>
+						<p>Data: {date}</p>
+					</div>
+				</Centralizar>
 			</div>
-			<button onClick={voltar}>Voltar</button>
-			
+
+			<Centralizar>
+				<BotaoClicar onClick={voltar}>Voltar</BotaoClicar>
+			</Centralizar>
+
 			<div>
-				<h2>Candidatos Pendentes</h2>
+				<Titulo>Candidatos Pendentes</Titulo>
 				{componenteCandidate}
 			</div>
 			
 			<div>
-				<h2>Candidatos Aprovados</h2>
+				<Titulo>Candidatos Aprovados</Titulo>
 				{componenteApproved}
 			</div>
     	</div>

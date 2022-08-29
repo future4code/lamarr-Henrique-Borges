@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import * as MyRoute from "../Coodinator/Coodinator";
+import {Titulo,  Centralizar, BotaoClicar} from './style'
 
 export function HomePage() {
   
@@ -8,9 +9,11 @@ export function HomePage() {
 
   	return (
     	<div>
-      		<h1>LabeX</h1>
-      		<button onClick={()=>{MyRoute.goToListTrips(navigate)}}>Ver Viagens</button>
-      		<button onClick={()=>{MyRoute.goToLogin(navigate)}}>Área de Admin</button>
+      		<Titulo>LabeX</Titulo>
+			  <Centralizar>
+      		<BotaoClicar onClick={()=>{MyRoute.goToListTrips(navigate)}}>Ver Viagens</BotaoClicar>
+      		<BotaoClicar onClick={()=>{MyRoute.goToLogin(navigate)}}>Área de Admin</BotaoClicar>
+			  </Centralizar>
     	</div>
   	)
 }

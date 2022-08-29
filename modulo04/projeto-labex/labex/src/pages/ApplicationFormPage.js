@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "../Hooks/UseForm";
+import {Titulo,  Centralizar, BotaoClicar, Imput,Select } from './style'
 
 export function ApplicationFormPage() {
 	const navigate = useNavigate()
@@ -35,23 +36,27 @@ export function ApplicationFormPage() {
    
 	return (
     	<div>
-      		<h1>Formulário de inscrição</h1>
+      		<Titulo>Formulário de inscrição</Titulo>
+
+            <Centralizar>
+
 			<form onSubmit={fazerInscricao}>
                 <label htmlFor="viagem"/>
-                <select
+                <Select
                     name="trip"
                     id="viagem"
                     value={form.trip}
                     onChange={onChange}
                     required >
                     <option value={null}>Escolha uma Viagem</option>
-                    <option value="IXFIOGHnKRMV7mSsVIky">Picnic de Inverno em Plutão - Plutão</option>
-                    <option value="NDuDGfJ0n3Kkll6L24TI">Multi luau em Jupiter - Jupiter</option>
-                    <option value="YpxVueUiazMJxRHMgIp9">Surfando em Netuno - Netuno</option>
-                    <option value="fqYhsRmLSCgTygqowItT">Festança Marciana - Marte</option>
-                </select>
+                    <option value="dOfpSsCqpartuFe0vuUS">Picnic de Inverno em Plutão - Plutão</option>
+                    <option value="REpNr6nabehMiki1rLZ4">Multi luau em Jupiter - Jupiter</option>
+                    <option value="YV8K5rOe9sYWZINU7mN6">Surfando em Netuno - Netuno</option>
+                    <option value="wupihSGMKJNokn8Ctbkb">Festança Marciana - Marte</option>
+                </Select>
                 <label htmlFor="nome"/>
-                <input
+                <Imput
+            
                     name="name"
                     id="nome" 
                     placeholder="Nome"
@@ -63,7 +68,7 @@ export function ApplicationFormPage() {
                     required
                 />
                 <label htmlFor="idade"/>
-                <input
+                <Imput
                     name="age"
                     id="idade" 
                     placeholder="Idade"
@@ -74,7 +79,7 @@ export function ApplicationFormPage() {
                     required
                 />
                 <label htmlFor="texto de candidatura"/>
-                <input
+                <Imput
                     name="applicationText"
                     id="texto de candidatura" 
                     placeholder="Texto de Candidaturae"
@@ -86,7 +91,7 @@ export function ApplicationFormPage() {
                     required
                 />
                 <label htmlFor="profissão"/>
-                <input
+                <Imput
                     name="profession"
                     id="profissão" 
                     placeholder="Profissão"
@@ -98,7 +103,7 @@ export function ApplicationFormPage() {
                     required
                 />
                 <label htmlFor="paises"/>
-                <select
+                <Select
             
                     name="country"
                     id="paises"
@@ -356,10 +361,15 @@ export function ApplicationFormPage() {
                     <option value="Wallis e Futuna">Wallis e Futuna</option>
                     <option value="Zimbabwe">Zimbabwe</option>
                     <option value="Zâmbia">Zâmbia</option>
-                </select>
-                <button onClick={voltar}>Voltar</button>
-                <button type="submit"> Enviar </button> 
+                </Select>
+                <Centralizar>
+
+                <BotaoClicar onClick={voltar}>Voltar</BotaoClicar>
+                <BotaoClicar type="submit"> Enviar </BotaoClicar> 
+                </Centralizar>
             </form>
+            </Centralizar>
+    
     	</div>
 	)
 }

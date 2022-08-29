@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "../Hooks/UseForm";
 import { useProtectedPage } from "../Hooks/useProtectedPage";
+import {Titulo,  Centralizar, BotaoClicar, Imput,Select} from './style'
 
 
 export function CreateTripPage() {
@@ -51,10 +52,12 @@ export function CreateTripPage() {
 
 	return (
     	<div>
-      		<h1>Criar nova Viagem</h1>
+      		<Titulo>Criar nova Viagem</Titulo>
+            <Centralizar>
+
 			<form  onSubmit={criarViagem}>
 				<label htmlFor="nome"/>
-                <input
+                <Imput
                     name="name"
                     id="nome" 
                     placeholder="Nome"
@@ -66,7 +69,7 @@ export function CreateTripPage() {
                     required
                 />
 				<label htmlFor="planeta"/>
-                <select
+                <Select
                     name="planet"
                     id="planeta"
                     value={form.planet}
@@ -81,9 +84,9 @@ export function CreateTripPage() {
 					<option value="Saturno">Saturno</option>
 					<option value="Urano">Urano </option>
 					<option value="Netuno">Netuno</option>
-                </select>
+                </Select>
 				<label htmlFor="data"/>
-                <input
+                <Imput
                     name="date"
                     id="data"
                     value={form.date}
@@ -93,7 +96,7 @@ export function CreateTripPage() {
                     required
                 />
 				<label htmlFor="descricao"/>
-                <input
+                <Imput
                     name="description"
                     id="descricao" 
                     placeholder="Descrição"
@@ -105,7 +108,7 @@ export function CreateTripPage() {
                     required
                 />
 				<label htmlFor="dias"/>
-                <input
+                <Imput
                     name="durationInDays"
                     id="dias" 
                     placeholder="Duração em Dias"
@@ -115,9 +118,12 @@ export function CreateTripPage() {
 					min="50"
                     required
                 />
-                 <button onClick={voltar}>Voltar</button>
-				<button type="submit"> Enviar </button> 
+                <Centralizar>
+                    <BotaoClicar onClick={voltar}>Voltar</BotaoClicar>
+				    <BotaoClicar type="submit"> Enviar </BotaoClicar> 
+                </Centralizar>
 			</form>
+            </Centralizar>
     	</div>
   	)
 }
