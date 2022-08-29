@@ -2,9 +2,11 @@ import React from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "../Hooks/UseForm";
+import { useProtectedPage } from "../Hooks/useProtectedPage";
 
 
 export function CreateTripPage() {
+    useProtectedPage()
 
 	const navigate = useNavigate()
     const voltar = () => {
@@ -113,6 +115,7 @@ export function CreateTripPage() {
 					min="50"
                     required
                 />
+                 <button onClick={voltar}>Voltar</button>
 				<button type="submit"> Enviar </button> 
 			</form>
     	</div>
