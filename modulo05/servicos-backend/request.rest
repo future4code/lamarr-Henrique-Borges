@@ -1,0 +1,10 @@
+POST http://localhost:3003/enderecos/criar
+content-type: application/json
+
+{
+    "cep": "50690900",
+    "numero": "9155",
+    "complemento": "Teste 04"
+}
+
+### 
