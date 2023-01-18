@@ -2,8 +2,17 @@ POST http://localhost:3003/createUser
 Content-Type: application/json
 
 {
-    "name": "Rocket Raccoon",
-    "email": "rocket@email.com",
-    "password": "lebre!!??"
+    "name": "Stephen Strange",
+    "email": "steve@email.com",
+    "password": "estranho"
 }
+
 ###
+
+GET http://localhost:3003/allUsers
+Content-Type: application/json
+
+###
+
+DELETE http://localhost:3003/users/1674048739115
+Content-Type: application/json

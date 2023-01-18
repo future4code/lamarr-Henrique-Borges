@@ -1,4 +1,5 @@
 import { UserDatabase } from "../data/UserDatabase";
+import { User } from "../models/User";
 
 export class UserBusiness {
     registerUser = async (input:any): Promise<void> => {
@@ -57,13 +58,41 @@ export class UserBusiness {
                 throw new Error("O valor do parâmetro 'password' deve ter 8 caracteres ou mais!")
             }
 
-            const userDatabase = new UserDatabase();
+            const userDatabase = new UserDatabase()
             await userDatabase.registerUser({
                 id,
                 name,
                 email,
                 password,
             })
+
+        } catch (err:any) {
+            throw new Error(err.message)
+        }
+    }
+
+    getAllUsers = async (): Promise<User[]> => {
+        try {
+            const userDatabase = new UserDatabase()
+            return await userDatabase.getAllUsers()
+        } catch (err:any) {
+            throw new Error(err.message)
+        }
+    }
+
+    deleteUser = async (id:string): Promise<void> => {
+        let errorCode = 400
+
+        try {
+
+            if (!id) {
+                errorCode = 422
+                throw new Error(
+                    "Por favor, insira o id do Usuário que deseja deletar do banco de dados."
+                )
+            }
+            const userDatabase = new UserDatabase()
+            await userDatabase.deleteUser(id)
 
         } catch (err:any) {
             throw new Error(err.message)

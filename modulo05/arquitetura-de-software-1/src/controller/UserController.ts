@@ -21,4 +21,33 @@ export class UserController {
             res.status(errorCode).send(err.message);
         }
     }
+
+    getAllUsers = async (req:Request, res:Response): Promise<void> => {
+        let errorCode = 400
+
+        try {
+            const userBusiness = new UserBusiness()
+            const users = await userBusiness.getAllUsers()
+            res.status(200).send(users)
+
+        } catch (err: any) {
+            res.status(errorCode).send(err.message);
+        }
+    }
+
+    deleteUser = async (req:Request, res:Response): Promise<void> => {
+        let errorCode = 400
+
+        try {
+            const id: string = req.params.id
+
+            const userBusiness = new UserBusiness()
+            await userBusiness.deleteUser(id)
+
+            res.status(201).send("Usuário deletado com sucesso!")
+
+        } catch (err: any) {
+            res.status(errorCode).send(err.message);
+        }
+    }
 }
