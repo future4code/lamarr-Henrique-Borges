@@ -1,0 +1,21 @@
+POST http://localhost:3003/user/signup
+Content-Type: application/json
+
+{ 
+    "email": "Niko2@email.com", 
+    "password": "niko2222"
+}
+
+###
+POST http://localhost:3003/user/login
+Content-Type: application/json
+
+{ 
+    "email": "Niko2@email.com", 
+    "password": "niko2222"
+}
+
+###
+GET http://localhost:3003/user/profile
+Authorization: 
+Content-Type: application/json
