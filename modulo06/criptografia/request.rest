@@ -1,0 +1,21 @@
+POST http://localhost:3003/user/signup
+Content-Type: application/json
+
+{ 
+    "email": "Niko3@email.com", 
+    "password": "niko3333"
+}
+
+###
+POST http://localhost:3003/user/login
+Content-Type: application/json
+
+{ 
+    "email": "Niko3@email.com", 
+    "password": "niko3333"
+}
+
+###
+GET http://localhost:3003/user/profile
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNjOGU2NWU4LTUwNDItNDg1ZS04OThmLTg2MmQ1ZWQzMTg1MiIsImlhdCI6MTY3NTQ1Mzg0OCwiZXhwIjoxNjc1NDUzOTA4fQ.ILmtWvzFzmJKBz0_-oF44MzcCRm9XvqxtbIuE3pB0oo
+Content-Type: application/json
