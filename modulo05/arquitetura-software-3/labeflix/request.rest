@@ -1,0 +1,65 @@
+POST http://localhost:3003/user/create
+Content-Type: application/json
+
+{
+    "name": "teste5",
+    "email": "email5@email.com",
+    "password": "112345678911"
+}
+
+###
+
+GET http://localhost:3003/user/getAll
+Content-Type: application/json
+
+###
+
+POST http://localhost:3003/movie/create
+Content-Type: application/json
+
+{ 
+    "title": "Mad Max: Estrada da Fúria", 
+    "description": "Em um mundo pós-apocalíptico, Max Rockatansky acredita que a melhor forma de sobreviver é não depender de ninguém. Porém, após ser capturado pelo tirano Immortan Joe e seus rebeldes, Max se vê no meio de uma guerra mortal iniciada pela Imperatriz Furiosa, que tenta salvar um grupo de garotas. Também tentando fugir, Max aceita ajudá-la.",
+    "durationInMinutes": 120, 
+    "yearOfRelease": 2015 
+}
+
+###
+
+POST http://localhost:3003/movie/create
+Content-Type: application/json
+
+{ 
+    "title": "Scarface", 
+    "description": "Após receber residência permanente nos Estados Unidos em troca do assassinato de um oficial do governo cubano, Tony Montana se torna o chefe do tráfico de drogas em Miami. Matando qualquer um que entre em seu caminho, Tony eventualmente se torna o maior traficante da Flórida, controlando quase toda a cocaína que entra em Miami. Porém, a pressão da polícia, as guerras com cartéis colombianos e sua própria paranoia servem para alimentar as chamas de sua eventual queda.",
+    "durationInMinutes": 170, 
+    "yearOfRelease": 1983
+}
+###
+
+POST http://localhost:3003/movie/create
+Content-Type: application/json
+
+{ 
+    "title": "El Camino: A Breaking Bad Movie", 
+    "description": "Assombrado pelo passado, o fugitivo Jesse Pinkman tenta encontrar um lugar seguro para viver.",
+    "durationInMinutes": 120, 
+    "yearOfRelease": 2019 
+}
+
+###
+
+POST http://localhost:3003/movie/create
+Content-Type: application/json
+
+{ 
+    "title": "TESTE", 
+    "description": "teste teste teste teste teste ",
+    "durationInMinutes": 150, 
+    "yearOfRelease": 2023 
+}
+
+###
+
+GET http://localhost:3003/movie/getAll
+Content-Type: application/json
